@@ -1,0 +1,129 @@
+/* Базовый сброс стилей и шрифты */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Стили навигации и хедера */
+.hero-section {
+    background: url('piano_background.jpg') no-repeat center center/cover; /* !!! ЗАМЕНИТЕ piano_background.jpg НА ВАШЕ ФОТО !!! */
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 100px;
+    position: relative;
+    /* Затемнение фона, чтобы текст читался лучше */
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Темный фильтр */
+    z-index: 0;
+}
+
+.container, .navbar {
+    position: relative; /* Чтобы контент был над темным фильтром */
+    z-index: 1;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.contact-info a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* Стили контента первого экрана */
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.small-text {
+    font-size: 0.8rem;
+    margin-top: 15px;
+    opacity: 0.8;
+}
+
+/* Стили кнопки CTA (Призыв к действию) */
+.cta-button {
+    display: inline-block;
+    background-color: #FFA726; /* Яркий оранжевый/золотой цвет */
+    color: black;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #FFB74D;
+}
+
+/* Стили секции с формой (пример) */
+.form-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box; /* Важно для корректной ширины */
+}
+
+.privacy-text {
+    font-size: 0.75rem;
+    color: #777;
+}
